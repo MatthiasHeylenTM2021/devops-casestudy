@@ -19,4 +19,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: app
-          path: repos/casestudy_devops/casestudy_devops/bin/Release/net6.0-windows/casestudy_devops.exe
+          path: repos/casestudy_devops/casestudy_devops/bin/Release/net6.0-windows/
