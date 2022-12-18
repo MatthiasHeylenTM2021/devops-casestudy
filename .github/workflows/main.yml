@@ -5,7 +5,6 @@ on: [push]
 jobs:
   build:
     runs-on: windows-latest
-    working-directory: \repos\casestudy_devops\
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET 6.0
@@ -13,9 +12,9 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Install dependencies
-      run: dotnet restore 
+      run: dotnet restore \repos\casestudy_devops\
     - name: Build and test
-      run: dotnet build --configuration Release && dotnet test
+      run: dotnet build --configuration Release && dotnet test \repos\casestudy_devops\
     - name: Publish artifacts
       uses: actions/upload-artifact@v2
       with:
