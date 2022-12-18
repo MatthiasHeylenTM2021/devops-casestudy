@@ -12,11 +12,11 @@ jobs:
         with:
           dotnet-version: 6.0.x
       - name: Install dependencies
-        run: dotnet restore repos\casestudy_devops\
+        run: dotnet restore repos/casestudy_devops/
       - name: Build and test
-        run: dotnet build --configuration Release repos\casestudy_devops\ && dotnet test repos\casestudy_devops\
+        run: dotnet build --configuration Release repos/casestudy_devops/ && dotnet test repos/casestudy_devops/
       - name: Publish artifacts
         uses: actions/upload-artifact@v2
         with:
           name: app
-          path: bin/Release
+          path: repos/casestudy_devop/casestudy_devops/bin/Release/
